@@ -2,7 +2,7 @@
 FindRoots: A C++ command-line application that calculates the real roots of a quadratic polynomial ax^2 + bx + c. This project includes the source code, CMake configuration for building, and detailed instructions for usage and compilation.
 
 ## File Descriptions
-findroots.cpp: The main source file containing the implementation of the root-finding algorithm.<br />
+main.cpp: The main source file containing the implementation of the root-finding algorithm.<br />
 CMakeLists.txt: The CMake configuration file for building the project.<br />
 README.md: This file, which contains instructions and information about the project.
 
