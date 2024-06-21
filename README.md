@@ -57,10 +57,13 @@ Install CMake:
    cmake ..
    cmake --build .
 6. The executable findroots will be generated in the build directory.
+   
 ### Run the program
 After compiling the project, you can run the program from the build directory:
-   ```sh
-   findroots.exe 1 -3 2
+
+findroots.exe 1 -3 2
+
+
 This will execute the program with the coefficients `a = 1`, `b = -3`, and `c = 2`. The program will calculate the roots of the polynomial \(x^2 - 3x + 2\) and print them to the terminal.
 
 
