@@ -37,10 +37,10 @@ To compile and run this project, you need to have the following software install
 - CMake (version 3.10 or higher)
 - A C++ compiler (e.g., GCC on Linux or MSVC on Windows)
 
-1. Create the following directory structure:
-   ├── CMakeLists.txt
-   ├── README.md
-   └── src/
+1. Create the following directory structure:<br />
+   ├── CMakeLists.txt<br />
+   ├── README.md<br />
+   └── src/<br />
    └── main.cpp
 
 2. Clone this repository:
