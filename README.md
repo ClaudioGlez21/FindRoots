@@ -1,5 +1,5 @@
 # FindRoots
-FindRoots: A C++ command-line application that calculates the real roots of a quadratic polynomial ax^2 + bx + c. This project includes the source code, CMake configuration for building, and detailed instructions for usage and compilation.
+The application takes three coefficients (a, b, c) as command-line arguments and prints the real roots of the polynomial. If no real roots are found, it prints `{}`.
 
 ## File Descriptions
 main.cpp: The main source file containing the implementation of the root-finding algorithm.<br />
@@ -32,49 +32,46 @@ Output:<br />
 
 ## Compilation
 
-To compile this program, you need to have `CMake` and a C++ compiler installed. Follow these steps:
+To compile and run this project, you need to have the following software installed:
 
-1. Install Visual Studio:
+- CMake (version 3.10 or higher)
+- A C++ compiler (e.g., GCC on Linux or MSVC on Windows)
 
-   Download and install Visual Studio with the "Desktop development with C++" workload.
+1. Create the following directory structure:
+   ├── CMakeLists.txt
+   ├── README.md
+   └── src/
+   └── main.cpp
 
-
-2. Download and install CMake from cmake.org and ensure it is added to your system's PATH.
-
-3. Clone this repository:
+2. Clone this repository:
 
    ```sh
    git clone https://github.com/ClaudioGlez21/FindRoots.git
    cd FindRoots
 
-4. Create a build directory and navigate to it:
+3. Create a build directory and navigate to it:
    ```sh
    mkdir build
    cd build
-5. Run CMake and compile the program:
+4. Run CMake and compile the program:
    ```sh
    cmake ..
    cmake --build .
-6. The executable findroots will be generated in the build directory.
+5. The executable findroots will be generated in the build directory.
    
 ### Run the program
 After compiling the project, you can run the program from the build directory:
 
 findroots.exe 1 -3 2
 
-
 This will execute the program with the coefficients `a = 1`, `b = -3`, and `c = 2`. The program will calculate the roots of the polynomial \(x^2 - 3x + 2\) and print them to the terminal.
 
-   
-## Notes
-The program only calculates real roots. If the discriminant (b^2 - 4ac) is negative, the program will output {}.
-No external libraries are used for root calculation. The quadratic formula is implemented manually.
 
 ## Implementation Details
 The program calculates the roots of the quadratic polynomial using the quadratic formula:
 ![image](https://github.com/ClaudioGlez21/FindRoots/assets/127899820/9b2a4364-11e5-4fa2-b8e8-c05570a79ef4)
 
-### Depending on the value of the discriminant (b^2 - 4ac):
+#### Importance of the value of the discriminant (b^2 - 4ac):
 
 If the discriminant is greater than 0, the polynomial has two distinct real roots.
 If the discriminant is equal to 0, the polynomial has one real double root.
