@@ -80,3 +80,4 @@ README.md: This file, which contains instructions and information about the proj
 
 ## Implementation Details
 The program calculates the roots of the quadratic polynomial using the quadratic formula
+![image](https://github.com/ClaudioGlez21/FindRoots/assets/127899820/1dfb176c-ff8f-474e-b31a-11e294adfe06)
