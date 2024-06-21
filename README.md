@@ -1,5 +1,17 @@
 # FindRoots
-The application takes three coefficients (a, b, c) as command-line arguments and prints the real roots of the polynomial. If no real roots are found, it prints `{}`.
+
+## Overview
+
+This project is a C++ application that calculates the real roots of a quadratic polynomial of the form `a x^2 + b x + c`. It uses the standard quadratic formula to find the roots and prints them to the terminal.
+
+## How It Works
+
+The code calculates the roots of the quadratic polynomial using the discriminant (`b^2 - 4ac`).
+![image](https://github.com/ClaudioGlez21/FindRoots/assets/127899820/9b2a4364-11e5-4fa2-b8e8-c05570a79ef4)
+Depending on the value of the discriminant, the program determines the nature and number of roots:
+- If the discriminant is greater than 0, there are two distinct real roots.
+- If the discriminant is equal to 0, there is one real double root.
+- If the discriminant is less than 0, there are no real roots (complex roots are ignored).
 
 ## File Descriptions
 main.cpp: The main source file containing the implementation of the root-finding algorithm.<br />
@@ -67,12 +79,5 @@ findroots.exe 1 -3 2
 This will execute the program with the coefficients `a = 1`, `b = -3`, and `c = 2`. The program will calculate the roots of the polynomial \(x^2 - 3x + 2\) and print them to the terminal.
 
 
-## Implementation Details
-The program calculates the roots of the quadratic polynomial using the quadratic formula:
-![image](https://github.com/ClaudioGlez21/FindRoots/assets/127899820/9b2a4364-11e5-4fa2-b8e8-c05570a79ef4)
 
-#### Importance of the value of the discriminant (b^2 - 4ac):
 
-If the discriminant is greater than 0, the polynomial has two distinct real roots.
-If the discriminant is equal to 0, the polynomial has one real double root.
-If the discriminant is less than 0, the polynomial has no real roots, and the program will output {}.
