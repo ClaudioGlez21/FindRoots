@@ -14,17 +14,17 @@ Where `a`, `b`, and `c` are the coefficients of the polynomial.
 
 ## Examples
 
-### Example 1
+### Example 1 (two distinct real roots)
 findroots 1 -3 2<br />
 Output:<br />
 {2, 1}<br />
 
-### Example 2
+### Example 2 (one real double root)
 findroots 1 2 1<br />
 Output:<br />
 {-1}
 
-### Example 3
+### Example 3 (no real roots)
 findroots 1 0 1<br />
 Output:<br />
 {}<br />
@@ -36,7 +36,7 @@ To compile this program, you need to have `CMake` and a C++ compiler installed. 
 
 1. Install Visual Studio:
 
-Download and install Visual Studio with the "Desktop development with C++" workload.
+   Download and install Visual Studio with the "Desktop development with C++" workload.
 
 
 2. Download and install CMake from cmake.org and ensure it is added to your system's PATH.
@@ -65,15 +65,10 @@ findroots.exe 1 -3 2
 
 This will execute the program with the coefficients `a = 1`, `b = -3`, and `c = 2`. The program will calculate the roots of the polynomial \(x^2 - 3x + 2\) and print them to the terminal.
 
-
-
-
    
 ## Notes
 The program only calculates real roots. If the discriminant (b^2 - 4ac) is negative, the program will output {}.
 No external libraries are used for root calculation. The quadratic formula is implemented manually.
-
-
 
 ## Implementation Details
 The program calculates the roots of the quadratic polynomial using the quadratic formula:
@@ -84,4 +79,3 @@ The program calculates the roots of the quadratic polynomial using the quadratic
 If the discriminant is greater than 0, the polynomial has two distinct real roots.
 If the discriminant is equal to 0, the polynomial has one real double root.
 If the discriminant is less than 0, the polynomial has no real roots, and the program will output {}.
-
