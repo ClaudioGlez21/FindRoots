@@ -1,6 +1,11 @@
 # FindRoots
 FindRoots: A C++ command-line application that calculates the real roots of a quadratic polynomial ax^2 + bx + c. This project includes the source code, CMake configuration for building, and detailed instructions for usage and compilation. Ideal for understanding the implementation of the quadratic formula without external libraries.
 
+## File Descriptions
+findroots.cpp: The main source file containing the implementation of the root-finding algorithm.
+CMakeLists.txt: The CMake configuration file for building the project.
+README.md: This file, which contains instructions and information about the project.
+
 ## Usage
 
 The program is executed from the command line as follows:
@@ -29,55 +34,52 @@ Output:<br />
 
 To compile this program, you need to have `CMake` and a C++ compiler installed. Follow these steps:
 
-1. Clone the repository:
+1. Install Visual Studio:
+
+Download and install Visual Studio with the "Desktop development with C++" workload.
+
+Install CMake:
+
+2. Download and install CMake from cmake.org and ensure it is added to your system's PATH.
+
+3. Clone this repository:
 
    ```sh
-   git clone <URL of the repository>
-   cd findroots
+   git clone https://github.com/ClaudioGlez21/FindRoots.git
+   cd FindRoots
 
-2. Create a build directory and navigate to it:
+4. Create a build directory and navigate to it:
    ```sh
    mkdir build
    cd build
-3. Run CMake and compile the program:
+5. Run CMake and compile the program:
    ```sh
    cmake ..
-   make
-4. The executable findroots will be generated in the build directory.
-
-
-### Using MinGW
-
-1. Install MinGW:
-
-   Download and install MinGW from [MinGW-w64](https://www.mingw-w64.org/) and ensure the `bin` directory (e.g., `C:\mingw-w64\bin`) is added to your system's PATH.
-
-2. Install CMake:
-
-   Download and install CMake from [cmake.org](https://cmake.org/download/) and ensure it is added to your system's PATH.
-
-3. Clone the repository:
-
-   Open Command Prompt and run:
+   cmake --build .
+6. The executable findroots will be generated in the build directory.
+### Run the program
+After compiling the project, you can run the program from the build directory:
    ```sh
-   git clone <URL of the repository>
-   cd findroots
+   findroots.exe 1 -3 2
+This will execute the program with the coefficients `a = 1`, `b = -3`, and `c = 2`. The program will calculate the roots of the polynomial \(x^2 - 3x + 2\) and print them to the terminal.
+
 
 
 
    
-   
-4. The executable findroots will be generated in the build directory.
-
 ## Notes
 The program only calculates real roots. If the discriminant (b^2 - 4ac) is negative, the program will output {}.
 No external libraries are used for root calculation. The quadratic formula is implemented manually.
 
-## File Descriptions
-findroots.cpp: The main source file containing the implementation of the root-finding algorithm.
-CMakeLists.txt: The CMake configuration file for building the project.
-README.md: This file, which contains instructions and information about the project.
+
 
 ## Implementation Details
-The program calculates the roots of the quadratic polynomial using the quadratic formula
-![image](https://github.com/ClaudioGlez21/FindRoots/assets/127899820/1dfb176c-ff8f-474e-b31a-11e294adfe06)
+The program calculates the roots of the quadratic polynomial using the quadratic formula:
+![image](https://github.com/ClaudioGlez21/FindRoots/assets/127899820/9b2a4364-11e5-4fa2-b8e8-c05570a79ef4)
+
+### Depending on the value of the discriminant (b^2 - 4ac):
+
+If the discriminant is greater than 0, the polynomial has two distinct real roots.
+If the discriminant is equal to 0, the polynomial has one real double root.
+If the discriminant is less than 0, the polynomial has no real roots, and the program will output {}.
+
